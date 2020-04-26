@@ -1,0 +1,32 @@
+<html>
+<head>
+<title> live clock </title>
+</head>
+<form name="timer">
+<input type=text size=12 name="clock">
+</form>
+<script language=javascript> 
+function sc()
+{
+var CDate=new Date()
+var hours=CDate.getHours()
+var min= CDate.getMinutes()
+var sec= CDate.getSeconds()
+var ampm="AM"
+if (hours > 12)
+{
+ampm="pm"
+hours=hours-12
+}
+if(hours==0)
+hours=12
+if (min <=9)
+min ="0" + min
+if (sec <=9)
+sec = "0" +sec
+document.timer.clock.value=hours+ ":" + min + ":" + sec + " " + ampm
+setTimeout ("sc()",1000)
+}
+sc()
+</script>
+</html>

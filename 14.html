@@ -1,0 +1,80 @@
+<html>
+<head>
+<title> ABC electronic shop </title>
+<script language=javascript>
+function ab()
+{
+if (document.f1.l1.options[0].selected)
+   { 
+      if (document.f1.c1[0].checked)
+          {
+            amt=3000;
+            }
+      else 
+          {
+            amt=4500;
+            }
+      }
+else if (document.f1.l1.options[1].selected)
+     {
+         if (document.f1.c1[0].checked)
+           {
+              amt=4000;
+             }
+        else 
+        {
+           amt=6500;
+          }
+       }
+ else if (document.f1.l1.options[2].selected)
+     {
+         if (document.f1.c1[0].checked)
+           {
+              amt=8000;
+             }
+        else 
+        {
+           amt=11000;
+          }
+       }
+else
+     {
+         if (document.f1.c1[0].checked)
+           {
+              amt=14000;
+             }
+        else 
+        {
+           amt=18000;
+          }
+       }
+document.f1.t1.value=amt;
+}
+</script>
+<body>
+<h2 align=center> Akash International Tourism</h2>
+<hr align=center size=5 width=450 noshade>
+<h4> select a tour package</h4>
+<form name=f1>
+<select name=l1 size=3>
+<option> shimla
+<option> nanital
+<option> darjeeling
+<option> kashmir
+</select>
+<input type=radio value=0 name=c1 checked> normAL
+<input type=radio value=1 name=c1 > deluxe
+<input type=button value=check amt onclick="ab()">
+<br>
+<h4>
+total fares:
+</h4>
+<br>
+<input type=text name=t1 value=" ">
+</form>
+</body>
+</head>
+</html>
+
+ 
+ 

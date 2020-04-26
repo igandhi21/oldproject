@@ -1,0 +1,71 @@
+<html>
+<head>
+<script language=javascript>
+function pao()
+{
+var re= "Dear ";
+re= re+document.f1.name.value;
+re= re + ", you have ordered a ";
+if (document.f1.size.options[0].selected)
+{
+re=re+"small";
+}
+if (document.f1.size.options[1].selected)
+{
+re=re+"medium";
+}
+if (document.f1.size.options[2].selected)
+{
+re=re+"large";
+}
+re=re+ "pizza with chesse, tomatoes, "
+if (document.f1.top[0].checked)
+{
+re=re+ "and ham. ";
+}
+if (document.f1.top[1].checked)
+{
+re=re+ "and peppers. ";
+}
+re=re+ "It will be delivered in a ";
+if (document.f1.pac[0].checked)
+{
+re=re+ "cardboard box ";
+}
+if (document.f1.pac[1].checked)
+{
+re=re+ " styrofoam-insulated container ";
+}
+re=re+ " to the following address: ";
+re=re+ document.f1.address.value;
+alert(re);
+}
+</script>
+<body>
+<h2> Pizza Hut Online </h2>
+<form name=f1 action="mailto:gnbg@yahoo.com" method=post onSubmit="pao()">
+Customer Details: 
+<br>
+Name: <input name="name" size=20>
+Address: <input name="address" size=20>
+Mobile no. <input name="mobileno" size=20>
+<br>
+<p>Your Pizza Details: <br> 
+Size:
+<select name="size">
+<option> small
+<option selected> medium
+<option> large
+</select>
+<br>
+Toppings: <br>
+<input type=checkbox name=top> ham
+<input type=checkbox name=top> pepper <br>
+Packaging: <br>
+<input type=radio name="pac"> Cardboard box
+<input type=radio name="pac"> styrofoam-insulated container
+<p>
+<input type=submit value="place order">
+</form>
+</body>
+</html> 

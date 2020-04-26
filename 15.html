@@ -1,0 +1,79 @@
+<html>
+<head>
+<script language="javascript">
+function ac()
+{
+a=document.f1.list.selectedIndex;
+b=document.f1.list1.selectedIndex;
+if(a==0)
+   {
+     amount=10000;
+     }
+  else if (a==1)
+   { 
+      amount=14000;
+     }
+  else 
+     {
+        amount=5600;
+       }
+  if (document.f1.r1[0].checked)
+  { 
+     document.f1.t1.value=amount-amount*0.5;
+     document.f1.t2.value=" ";
+     }
+else if (document.f1.r1[1].checked)
+  { 
+      if (b==0)
+         {  
+             document.f1.t1.value=amount+amount*0.5;
+             document.f1.t2.value=document.f1.t1.value/12;
+           }
+      else if (b==1)
+         {  
+             document.f1.t1.value=amount+amount*0.7;
+             document.f1.t2.value=document.f1.t1.value/24;
+           }
+   else 
+          {  
+             document.f1.t1.value=amount+amount*0.9;
+             document.f1.t2.value=document.f1.t1.value/36;
+           }
+    }
+}
+</script>
+<body>
+<h1 align=center> ABC Electronic Shop </h1>
+<hr align=center size=5 width=450 noshade>
+<h4> Select the item from the list </h4>
+<form name="f1"> 
+<select name="list" size="3">
+<option> TV..
+<option> LCD..
+<option> Microwave..
+</select>
+<input type=radio value=1 name=r1 checked> Cash
+<input type=radio value=2 name=r1> Installment 
+<select name=list1 size=3>
+<option> 1 yr
+<option> 2yr
+<option> 3 yr
+</select>
+<input type="button" value="go" onclick="ac()">
+<br>
+<br>
+<br>
+<B> Total amount to be paid </b>
+<br>
+<br>
+<input type="text" name="t1">
+<br>
+<br>
+<b> Monthly installment </b>
+<br>
+<br>
+<input type="text" name="t2">
+</form>
+</body>
+</head>
+</html>

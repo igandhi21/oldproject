@@ -1,0 +1,24 @@
+<html>
+<head>
+<script language=javascript>
+s=0;
+a=153;
+t=a;
+while(a>0)
+{
+b=a%10;
+a=parseInt(a/10);
+s=s+(b*b*b);
+}
+document.write(s+"<br>");
+if(s==t)
+{
+document.write("it is an armstrong no.");
+}
+else
+{
+document.write("it is not an armstrong no.");
+}
+</script>
+</head>
+</html>

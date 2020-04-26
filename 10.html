@@ -1,0 +1,24 @@
+<html>
+<head>
+<script language=javascript>
+function cc(form)
+{
+form.cu.value=form.co.options[form.co.selectedIndex].value
+}
+</script>
+<body>
+<form>
+<p> Demonstrating <i> onChange </i> event: </p>
+<b> select your country </b>
+<br>
+<select name="co" onChange="cc(this.form)">
+<option value="indian Rupees"> India
+<option value="Bangladeshi Taka"> Bangladesh
+<option value="US Dollars"> USA
+<option value="UK Pound"> United Kingdom
+</select>
+<p> <b> prices are displayed in : </b> <br>
+<input type="text" name="cu">
+</form>
+</body>
+</html>
